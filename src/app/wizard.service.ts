@@ -32,7 +32,7 @@ export class WizardService {
     else if (this.currentStep == 6)
       return "Logo Color Amounts";
     else if (this.currentStep == 7)
-      return "Item Order Quant";
+      return "Item Order Quantities";
   }
 
   getProductSelection(){return this.productSelection;}

@@ -7,13 +7,14 @@ import { WizardService } from '../wizard.service';
   styleUrls: ['./header-nav.component.css']
 })
 export class HeaderNavComponent implements OnInit {
-  private stepNumber: number;
-  private stepLabel: string;
+  stepNumber: number;
+  stepLabel: string;
+  wizard: WizardService;
 
   constructor(wizard: WizardService) {
     this.stepNumber = wizard.getCurrentStep();
     this.stepLabel = wizard.getStepLabel();
-   }
+  }
 
   ngOnInit() {
 

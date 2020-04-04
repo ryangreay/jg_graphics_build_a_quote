@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WizardService } from '../wizard.service';
 
 @Component({
   selector: 'app-header-nav',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-nav.component.css']
 })
 export class HeaderNavComponent implements OnInit {
+  private stepNumber: number;
+  private stepLabel: string;
 
-  constructor() { }
+  constructor(wizard: WizardService) {
+    this.stepNumber = wizard.getCurrentStep();
+    this.stepLabel = wizard.getStepLabel();
+   }
 
   ngOnInit() {
+
   }
 
 }

@@ -16,23 +16,39 @@ export class WizardService {
 
   constructor() { }
 
-  get CurrentStep(){return this.currentStep;}
-  set CurrentStep(step){this.currentStep = step;}
+  getCurrentStep(){return this.currentStep; }
+  setCurrentStep(step){this.currentStep = step; }
+  getStepLabel(){
+    if (this.currentStep == 1)
+      return "Your Product";
+    else if (this.currentStep == 2)
+      return "Product Quality";
+    else if (this.currentStep == 3)
+      return "Product Fit";
+    else if (this.currentStep == 4)
+      return "Product Color";
+    else if (this.currentStep == 5)
+      return "Logo Location Amount";
+    else if (this.currentStep == 6)
+      return "Logo Color Amounts";
+    else if (this.currentStep == 7)
+      return "Item Order Quant";
+  }
 
-  get ProductSelection(){return this.productSelection;}
-  set ProductSelection(product){this.productSelection = product;}
+  getProductSelection(){return this.productSelection;}
+  setProductSelection(product){this.productSelection = product;}
 
-  get QualitySelection(){return this.qualitySelection;}
-  set QualitySelection(quality){this.qualitySelection = quality;}
+  getQualitySelection(){return this.qualitySelection;}
+  setQualitySelection(quality){this.qualitySelection = quality;}
 
-  get FitSelection(){return this.fitSelection;}
-  set FitSelection(fit){this.fitSelection = fit;}
+  getFitSelection(){return this.fitSelection;}
+  setFitSelection(fit){this.fitSelection = fit;}
 
-  get ColorSelection(){return this.colorSelection;}
-  set ColorSelection(color){ this.colorSelection = color;}
+  getColorSelection(){return this.colorSelection;}
+  setColorSelection(color){ this.colorSelection = color;}
 
-  get ArtworkLocations(){return this.artworkLocations; }
-  set ArtworkLocations(artworkLocation){this.artworkLocations = artworkLocation;}
+  getArtworkLocations(){return this.artworkLocations; }
+  setArtworkLocations(artworkLocation){this.artworkLocations = artworkLocation;}
 
   get ArtworkQuantities(){return this.artworkQuantities;}
   set ArtworkQuantites(artworkQuantity){this.artworkQuantities = artworkQuantity;}
@@ -41,6 +57,6 @@ export class WizardService {
   set Quantity(quantity){this.quantity = quantity;}
 
   get CurrentPrice(){return this.currentPrice;}
-  set CurrentPrice(price){this.cur}
+  set CurrentPrice(price){this.currentPrice = price;}
 
 }

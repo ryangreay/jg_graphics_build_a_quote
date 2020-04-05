@@ -17,7 +17,7 @@ export class WizardService {
   constructor() { }
 
   getCurrentStep(){return this.currentStep; }
-  setCurrentStep(step){this.currentStep = step; }
+  setCurrentStep(step: number){this.currentStep = step; }
   getStepLabel(){
     if (this.currentStep == 1)
       return "Your Product";
@@ -36,27 +36,27 @@ export class WizardService {
   }
 
   getProductSelection(){return this.productSelection;}
-  setProductSelection(product){this.productSelection = product;}
+  setProductSelection(product:string){this.productSelection = product;}
 
   getQualitySelection(){return this.qualitySelection;}
-  setQualitySelection(quality){this.qualitySelection = quality;}
+  setQualitySelection(quality:string){this.qualitySelection = quality;}
 
   getFitSelection(){return this.fitSelection;}
-  setFitSelection(fit){this.fitSelection = fit;}
+  setFitSelection(fit:string){this.fitSelection = fit;}
 
   getColorSelection(){return this.colorSelection;}
-  setColorSelection(color){ this.colorSelection = color;}
+  setColorSelection(color:string){ this.colorSelection = color;}
 
   getArtworkLocations(){return this.artworkLocations; }
-  setArtworkLocations(artworkLocation){this.artworkLocations = artworkLocation;}
+  setArtworkLocations(artworkLocation:number){this.artworkLocations = artworkLocation;}
 
-  get ArtworkQuantities(){return this.artworkQuantities;}
-  set ArtworkQuantites(artworkQuantity){this.artworkQuantities = artworkQuantity;}
+  getArtworkQuantities(){return this.artworkQuantities;}
+  setArtworkQuantites(artworkQuantity:number){this.artworkQuantities = artworkQuantity;}
 
-  get Quantity(){return this.quantity;}
-  set Quantity(quantity){this.quantity = quantity;}
+  getQuantity(){return this.quantity;}
+  setQuantity(quantity:number){this.quantity = quantity;}
 
-  get CurrentPrice(){return this.currentPrice;}
-  set CurrentPrice(price){this.currentPrice = price;}
+  getCurrentPrice(){return this.currentPrice;}
+  setCurrentPrice(price:n){this.currentPrice = price;}
 
 }

@@ -15,16 +15,7 @@ export class HeaderNavComponent implements OnInit {
 
   constructor(wizard: WizardService) {
     this.wizard = wizard;
-    this.stepNumber = this.wizard.getCurrentStep();
-    this.stepLabel = this.wizard.getStepLabel();
-    this.nextDisabled = 
-      (this.stepNumber == 1 && this.wizard.getProductSelection() == null) || 
-      (this.stepNumber == 2 && this.wizard.getQualitySelection() == null) || 
-      (this.stepNumber == 3 && this.wizard.getFitSelection() == null) ||
-      (this.stepNumber == 4 && this.wizard.getColorSelection() == null) || 
-      (this.stepNumber == 5 && this.wizard.getArtworkLocations() == null) || 
-      (this.stepNumber == 6 && this.wizard.getArtworkQuantities() == null) || 
-      (this.stepNumber == 7 && this.wizard.getQuantity() == null);
+    this.getWizardValues();
   }
 
   ngOnInit() {
@@ -32,12 +23,19 @@ export class HeaderNavComponent implements OnInit {
   }
 
   navigateToNextStep(){
-    this.stepNumber = this.wizard.setCurrentStep(this.stepNumber + 1);
-    this.stepLabel = this.wizard.getS
+    this.wizard.setCurrentStep(this.stepNumber + 1);
+    this.getWizardValues();
   }
 
   navigateToPreviousStep(){
     this.wizard.setCurrentStep(this.stepNumber - 1);
+    this.getWizardValues();
+  }
+
+  getWizardValues(){
+    this.stepNumber = this.wizard.getCurrentStep();
+    this.nextDisabled = this.wizard.nextStepDisabled();
+    this.stepLabel = this.wizard.getStepLabel();
   }
 
 }

@@ -14,10 +14,16 @@ export class WizardService {
   private quantity: number;
   private currentPrice: number;
 
-  constructor() { this.currentStep = 1; }
+  constructor() { 
+    this.currentStep = 1; 
+  }
 
-  getCurrentStep(){return this.currentStep; }
-  setCurrentStep(step: number){this.currentStep = step; return this.currentStep; }
+  getCurrentStep(){
+    return this.currentStep; 
+  }
+  setCurrentStep(step: number){
+    this.currentStep = step; 
+  }
   getStepLabel(){
     if (this.currentStep == 1)
       return "Your Product";
@@ -33,6 +39,15 @@ export class WizardService {
       return "Logo Color Amounts";
     else if (this.currentStep == 7)
       return "Item Order Quantities";
+  }
+  nextStepDisabled(){
+    return (this.currentStep == 1 && this.productSelection == null) || 
+      (this.currentStep == 2 && this.qualitySelection == null) || 
+      (this.currentStep == 3 && this.fitSelection == null) ||
+      (this.currentStep == 4 && this.colorSelection == null) || 
+      (this.currentStep == 5 && this.artworkLocations == null) || 
+      (this.currentStep == 6 && this.artworkQuantities == null) || 
+      (this.currentStep == 7 && this.quantity == null);
   }
 
   getProductSelection(){return this.productSelection;}

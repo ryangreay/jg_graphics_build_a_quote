@@ -12,4 +12,7 @@ export class ProductViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectProduct(product: string){
+    alert('You selected: ' + p)
+  }
 }

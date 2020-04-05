@@ -12,13 +12,18 @@
         </h3>
       </div>
       <div class="row">
-        <div class="col-md-auto">Product</div>
-        <div class="col-md-auto" [class.notActive]="stepNumber < 2">Quality</div>
-        <div class="col-md-auto" [class.notActive]="stepNumber < 3">Fit</div>
-        <div class="col-md-auto" [class.notActive]="stepNumber < 4">Color</div>
-        <div class="col-md-auto" [class.notActive]="stepNumber < 5">Artwork Locations</div>
-        <div class="col-md-auto" [class.notActive]="stepNumber < 6">Artwork Quantities</div>
-        <div class="col-md-auto" [class.notActive]="stepNumber < 7">Quantity</div>
+        <div class="relative pt-1">
+          <div class="overflow-hidden h-4 mb-1 text-base flex">
+            <div style="width:14.28%" class="flex flex-col text-center justify-center">Product</div>
+          <div style="width:14.28%" class="flex flex-col text-center justify-center" [class.notActive]="stepNumber < 2">Quality</div>
+          <div style="width:14.28%" class="flex flex-col text-center justify-center" [class.notActive]="stepNumber < 3">Fit</div>
+          <div style="width:14.28%" class="flex flex-col text-center justify-center" [class.notActive]="stepNumber < 4">Color</div>
+          <div style="width:14.28%" class="flex flex-col text-center justify-center" [class.notActive]="stepNumber < 5">Artwork Locations</div>
+          <div style="width:14.28%" class="flex flex-col text-center justify-center" [class.notActive]="stepNumber < 6">Artwork Quantities</div>
+          <div style="width:14.28%" class="flex flex-col text-center justify-center" [class.notActive]="stepNumber < 7">Quantity</div>
+          </div>
+        </div>
+        
       </div>
       <div class="row">
         <div class="relative pt-1">

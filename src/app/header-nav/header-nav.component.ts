@@ -33,6 +33,7 @@ export class HeaderNavComponent implements OnInit {
 
   navigateToNextStep(){
     this.stepNumber = this.wizard.setCurrentStep(this.stepNumber + 1);
+    this.stepLabel = this.wizard.getS
   }
 
   navigateToPreviousStep(){

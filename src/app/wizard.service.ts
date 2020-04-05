@@ -17,7 +17,7 @@ export class WizardService {
   constructor() { this.currentStep = 1; }
 
   getCurrentStep(){return this.currentStep; }
-  setCurrentStep(step: number){this.currentStep = step; }
+  setCurrentStep(step: number){this.currentStep = step; return this.currentStep; }
   getStepLabel(){
     if (this.currentStep == 1)
       return "Your Product";

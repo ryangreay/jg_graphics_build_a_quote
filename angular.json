@@ -24,7 +24,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/tailwind.css"
+              "src/assets/css/tailwind.css",
+              "src/assets/css/fontawesome.css"
             ],
             "scripts": []
           },

@@ -24,7 +24,7 @@ export class HeaderNavComponent implements OnInit {
       (this.stepNumber == 4 && wizard.getColorSelection() == null) || 
       (this.stepNumber == 5 && wizard.getArtworkLocations() == null) || 
       (this.stepNumber == 6 && wizard.getArtworkQuantities() == null) || 
-      (this.stepNumber == 7 && wizard.getQ() == null);
+      (this.stepNumber == 7 && wizard.getQu() == null);
   }
 
   ngOnInit() {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WizardService } from "../wizard.service";
 
 @Component({
   selector: 'app-product-view',
@@ -6,13 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-view.component.css']
 })
 export class ProductViewComponent implements OnInit {
+  private wizard: WizardService;
+  selectedProduct: string;
 
-  constructor() { }
+  constructor(wizard: WizardService) {
+    this.wizard = wizard;
+    this.selectedProduct = this.wizard.getProductSelection();
+   }
 
   ngOnInit() {
   }
 
   selectProduct(product: string){
-    alert('You selected: ' + p)
+    this.wizard.setProductSelection(product);
+    this.selectedProduct = product;
   }
 }

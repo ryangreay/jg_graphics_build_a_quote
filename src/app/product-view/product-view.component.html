@@ -1,6 +1,6 @@
 <div class="pt-6 flex flex-wrap">
   <div class="w-full md:w-4/12 px-4 text-center">
-    <button class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="wizar" (click)="selectProduct('mens_tshirt')">
+    <button class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="selectedProduct === 'mens_tshirt'" (click)="selectProduct('mens_tshirt')">
       <div class="px-4 py-4 flex-auto">
         <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
           <i class="fas fa-award"></i>
@@ -11,7 +11,7 @@
     </button>
   </div>
   <div class="w-full md:w-4/12 px-4 text-center">
-    <button class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="true" (click)="selectProduct('womens_tshirt')">
+    <button class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="selectedProduct === 'womens_tshirt'" (click)="selectProduct('womens_tshirt')">
       <div class="px-4 py-5 flex-auto">
         <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
           <i class="fas fa-retweet"></i>
@@ -22,7 +22,7 @@
     </button>
   </div>
   <div class="w-full md:w-4/12 px-4 text-center">
-    <button class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="true" (click)="selectProduct('long_sleeve_tshirt')">
+    <button class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="selectedProduct === 'long_sleeve_tshirt'" (click)="selectProduct('long_sleeve_tshirt')">
       <div class="px-4 py-5 flex-auto">
         <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
           <i class="fas fa-fingerprint"></i>

@@ -25,11 +25,9 @@
             "styles": [
               "src/styles.css",
               "src/assets/css/tailwind.css",
-              "src/assets/css/fontawesome.css",
-              "src/assets/css/all.min.css"
             ],
             "scripts": [
-              "src/assets/js/fa.js"
+              
             ]
           },
           "configurations": {

@@ -14,7 +14,7 @@ export class WizardService {
   private quantity: number;
   private currentPrice: number;
 
-  constructor() { }
+  constructor() { this.currentStep = 1; }
 
   getCurrentStep(){return this.currentStep; }
   setCurrentStep(step: number){this.currentStep = step; }
@@ -57,6 +57,6 @@ export class WizardService {
   setQuantity(quantity:number){this.quantity = quantity;}
 
   getCurrentPrice(){return this.currentPrice;}
-  setCurrentPrice(price:n){this.currentPrice = price;}
+  setCurrentPrice(price:number){this.currentPrice = price;}
 
 }

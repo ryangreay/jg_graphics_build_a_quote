@@ -19,7 +19,7 @@ export class ProductViewComponent implements OnInit {
   }
 
   getStep(){
-    return this.wizard.getCurrent
+    return this.wizard.getCurrentStep();
   }
 
   selectProduct(product: string){

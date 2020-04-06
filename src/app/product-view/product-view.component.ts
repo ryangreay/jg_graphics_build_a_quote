@@ -26,7 +26,7 @@ export class ProductViewComponent implements OnInit {
 
   selectQuality(quality: string){
     this.wizard.setQualitySelection(quality);
-    this.selectedQuality =
+    this.selectedQuality = quality;
   }
 
   selectProduct(product: string){

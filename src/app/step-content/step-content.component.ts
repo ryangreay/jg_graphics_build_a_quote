@@ -20,4 +20,8 @@ export class StepContentComponent implements OnInit {
     return this.wizard.getProductSelection();
   }
 
+  getQuality(){
+    return this.wizard.getQualitySelection();
+  }
+
 }

@@ -4,19 +4,19 @@
        <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
           <i class="fas fa-award"></i>
         </div>
-      mens tshirt
+      mens tshirt {{getQuality()}}
     </div>
     <div *ngIf="getProduct() === 'womens_tshirt'">
       <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
           <i class="fas fa-award"></i>
         </div>
-      womens tshirt
+      womens tshirt {{getQuality()}}
     </div>
     <div *ngIf="getProduct() === 'long_sleeve_tshirt'">
       <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
           <i class="fas fa-award"></i>
         </div>
-      long sleeve tshirt
+      long sleeve tshirt / {{getQuality()}}
     </div>
   </div> 
 </div>

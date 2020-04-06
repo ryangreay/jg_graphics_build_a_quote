@@ -9,6 +9,7 @@ import { WizardService } from '../wizard.service';
 })
 export class HeaderNavComponent implements OnInit {
   stepNumber: number;
+  currentProduct: string;
   nextDisabled: boolean;
   stepLabel: string;
   private wizard: WizardService;
@@ -19,11 +20,12 @@ export class HeaderNavComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   nextIsDisabled(){
-    rthis.wizard.nextStepDisabled();
+    /getWizardValues();
+    //alert(this.wizard.getProductSelection());
+    return this.wizard.nextStepDisabled();
   }
 
   navigateToNextStep(){
@@ -40,6 +42,7 @@ export class HeaderNavComponent implements OnInit {
     this.stepNumber = this.wizard.getCurrentStep();
     this.nextDisabled = this.wizard.nextStepDisabled();
     this.stepLabel = this.wizard.getStepLabel();
+    this.currentProduct = this.wizard.getProductSelection();
   }
 
 }

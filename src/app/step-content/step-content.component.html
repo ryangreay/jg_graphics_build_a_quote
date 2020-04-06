@@ -1,13 +1,22 @@
 <div class="flex text-center justify-content h-100">
   <div style="width:100%;" class="flex flex-col ">
-    <div *ngIf="getProductSelection() === 'mens_tshirt'">
+    <div *ngIf="getProduct() === 'mens_tshirt'">
+       <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+          <i class="fas fa-award"></i>
+        </div>
       mens tshirt
     </div>
-    <div *ngIf="getProductSelection() === 'womens_tshirt'">
-      mens tshirt
+    <div *ngIf="getProduct() === 'womens_tshirt'">
+      <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+          <i class="fas fa-award"></i>
+        </div>
+      womens tshirt
     </div>
-    <div *ngIf="getProductSelection() === 'l_tshirt'">
-      mens tshirt
+    <div *ngIf="getProduct() === 'long_sleeve_tshirt'">
+      <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+          <i class="fas fa-award"></i>
+        </div>
+      long sleeve tshirt
     </div>
   </div> 
 </div>

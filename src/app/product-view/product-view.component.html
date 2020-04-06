@@ -1,5 +1,5 @@
 <div class="pt-6 flex flex-wrap">
-  <div class="w" *ngIf="getStep() == 1"> 
+  <div class="w-full flex flex-wrap" *ngIf="getStep() == 1"> 
     <div class="w-full md:w-4/12 px-4 text-center">
     <button class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg" [class.bg-gray-300]="selectedProduct === 'mens_tshirt'" (click)="selectProduct('mens_tshirt')">
       <div class="px-4 py-4 flex-auto">

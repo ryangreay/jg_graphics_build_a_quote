@@ -18,6 +18,10 @@ export class ProductViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  getStep(){
+    return this.wizard.getCurrent
+  }
+
   selectProduct(product: string){
     this.wizard.setProductSelection(product);
     this.selectedProduct = product;

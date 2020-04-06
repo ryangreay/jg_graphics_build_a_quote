@@ -26,7 +26,6 @@ export class HeaderNavComponent implements OnInit {
 
   navigateToNextStep(){
     this.wizard.setCurrentStep(this.stepNumber + 1);
-    alert(this.wizard.getCurrentStep)
     this.getWizardValues();
   }
 

@@ -41,7 +41,7 @@
       </div>
     </div>
     <div style="width:10%" class="flex flex-col justify-center">
-      <button class="text-green-500 background-transparent font-bold uppercase px-3 py-1 text-base outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease" (click)="navigateToNextStep()" [disabled]="nextDisabled" [class.notActive]="nextDisabled"> 
+      <button class="text-green-500 background-transparent font-bold uppercase px-3 py-1 text-base outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease" (click)="navigateToNextStep()" [disabled]="nextDisabled" [class.notActive]="nextIsDisabled()"> 
         Next <i class="fa fa-chevron-right"></i>
       </button>
     </div>

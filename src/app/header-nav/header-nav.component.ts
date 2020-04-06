@@ -22,6 +22,10 @@ export class HeaderNavComponent implements OnInit {
 
   }
 
+  nextIsDisabled(){
+    rthis.wizard.nextStepDisabled();
+  }
+
   navigateToNextStep(){
     this.wizard.setCurrentStep(this.stepNumber + 1);
     this.getWizardValues();

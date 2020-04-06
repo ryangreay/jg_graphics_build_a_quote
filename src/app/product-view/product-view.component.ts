@@ -9,10 +9,12 @@ import { WizardService } from "../wizard.service";
 export class ProductViewComponent implements OnInit {
   private wizard: WizardService;
   selectedProduct: string;
+  selectedQuality: string;
 
   constructor(wizard: WizardService) {
     this.wizard = wizard;
     this.selectedProduct = this.wizard.getProductSelection();
+    this.selectedQuality = this.wizard.getQualitySelection();
    }
 
   ngOnInit() {
@@ -20,6 +22,11 @@ export class ProductViewComponent implements OnInit {
 
   getStep(){
     return this.wizard.getCurrentStep();
+  }
+
+  selectQuality(quality: string){
+    this.wizard.setQualitySelection(quality);
+    this.selectedQuality =
   }
 
   selectProduct(product: string){
